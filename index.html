@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download My Biography</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Use Inter as the default font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-4">
+
+    <!-- Main Content Card -->
+    <div class="w-full max-w-lg bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12 text-center">
+        
+        <!-- Profile Picture Placeholder -->
+        <div class="mx-auto mb-6 w-32 h-32 bg-gray-700 rounded-full flex items-center justify-center">
+             <!-- Icon using SVG for a professional look -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-3 text-white">
+            John Doe's Biography
+        </h1>
+
+        <!-- Subheading/Description -->
+        <p class="text-gray-400 mb-8 text-lg">
+            Thank you for your interest! Click the button below to download a PDF copy of my complete biography.
+        </p>
+
+        <!-- Download Button -->
+        <!-- 
+            IMPORTANT: 
+            1. Replace the '#' in the `href` attribute with your actual PDF download link.
+            2. (Optional) Change "Biography-John-Doe.pdf" in the `download` attribute to your preferred filename.
+        -->
+        <a href="#" 
+           download="Biography-John-Doe.pdf"
+           id="downloadButton"
+           class="inline-block w-full sm:w-auto bg-indigo-600 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition-all duration-300 transform hover:scale-105">
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-6 w-6 mr-3 -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download Biography
+        </a>
+
+    </div>
+
+    <script>
+        // A simple check to remind the user to add a link if they forget.
+        const downloadBtn = document.getElementById('downloadButton');
+        downloadBtn.addEventListener('click', (e) => {
+            if (downloadBtn.getAttribute('href') === '#') {
+                e.preventDefault(); // Prevents the link from navigating
+                alert("Reminder: You need to replace the '#' in the HTML with your actual PDF link!");
+            }
+        });
+    </script>
+
+</body>
+</html>
