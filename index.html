@@ -19,20 +19,27 @@
 </head>
 <body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-4">
 
-    <!-- Main Content Card -->
-    <div class="w-full max-w-lg bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12 text-center">
-        
-        <!-- Profile Picture Placeholder -->
-        <div class="mx-auto mb-6 w-32 h-32 bg-gray-700 rounded-full flex items-center justify-center">
-             <!-- Icon using SVG for a professional look -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-        </div>
+<div class="w-full max-w-lg bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12 text-center">
+
+    <!--
+        Profile Picture Section
+        - The `rounded-full` and `overflow-hidden` classes create the circular frame.
+        - The `<img>` tag will be perfectly cropped inside it.
+    -->
+    <div class="mx-auto mb-6 w-32 h-32 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden">
+        <!--
+            IMPORTANT:
+            Replace "https://placehold.co/200x200/4a5568/a0aec0?text=Your\nImage" with your actual image URL.
+            Using a placeholder for demonstration.
+        -->
+        <img src="jael_image_raw.jpeg"
+             alt="Profile Picture"
+             class="w-full h-full object-cover">
+    </div>
 
         <!-- Heading -->
         <h1 class="text-3xl md:text-4xl font-bold mb-3 text-white">
-            Jael Owusu's Funral Brochure
+            Jael Owusu's Funeral Brochure
         </h1>
 
         <!-- Subheading/Description -->
